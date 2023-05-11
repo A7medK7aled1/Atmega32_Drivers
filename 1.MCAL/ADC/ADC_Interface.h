@@ -53,12 +53,30 @@
 
 
 
-
+/*****************************************************************/
+/*  Description:Initialize ADC Configuration                     */
+/*****************************************************************/
 void ADC_voidInit(void);
+
+/*****************************************************************/
+/*  Description:Enable ADC Peripheral                            */
+/*****************************************************************/
 void ADC_Enabled(void);
+
+/*****************************************************************/
+/*  Description:Disable ADC Peripheral                           */
+/*****************************************************************/
 void ADC_Disabled(void);
 
+/*******************************************************************************/
+/*  Description:Start ADC Conversion with Synchronous technique Using Polling  */
+/*******************************************************************************/
+
 u8 ADC_u8StartConversionSynch(u8 Copy_u8Channel,u16* Copy_pu16Reading);
+
+/*************************************************************************************************************/
+/*  Description:Start ADC Conversion with Asynchronous technique Using Interrupt Must Enable Global Interrupt*/
+/*************************************************************************************************************/
 u8 ADC_u8StartConversionAsynch(u8 Copy_u8Channel, u16* Copy_pu8Reading, void(*Copy_pvNotificationFunc)(void));
 
 
