@@ -9,7 +9,7 @@
 #define RTOS_INTERFACE_H_
 
 
-void RTO_voidInit(void);
+void RTOS_voidStart(void);
 
-u8 RTO_u8CreatTask(u8 Copy_u8Priority,u16 Copy_u16Priodicity,u16 Copy_u16FirtsDelay,void (*pf)(void));
+u8 RTO_u8CreatTask(u8 Copy_u8Priority,u16 Copy_u16Priodicity,void (*Copy_pvTaskFunc)(void));
 #endif /* RTOS_INTERFACE_H_ */
