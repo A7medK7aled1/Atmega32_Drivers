@@ -11,10 +11,15 @@
 typedef struct
 {
 	u16 Preiodicity;
-	void (*Copy_pvTaskFunc)(void);
+	void (*TaskFunc)(void);
+	u8 State;
+	u16 FIrstDelay;
 
 }Task_T;
 
 static void voidScheduler(void);
+
+#define TASK_RESUMED		0
+#define TASK_SUSPENDED		1
 
 #endif /* RTOS_PRIVATE_H_ */
